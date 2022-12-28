@@ -5,13 +5,9 @@ if [ $isPresent -eq 0 ]
 then
 	echo "Employee is absent";
 	workingHour=0;
-elif [ $isPresent -eq 1 ]
-then
+else [ $isPresent -eq 1 ]
 	echo "Employee is present";
 	workingHour=8;
-else
-	echo "Employee is working as part time";
-	workingHour=4;
 fi
 salary=$(($perHourSalary * $workingHour));
 echo "Employee has earned $salary $ today";
