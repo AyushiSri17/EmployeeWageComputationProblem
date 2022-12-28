@@ -32,5 +32,15 @@ do
 	salary=$(($perHourSalary * $wHour));
 	totalSalary=$(($totalSalary + $salary));
 	((day++));
+
+echo "Daily Wage: "${salary[*]}
+echo "Total Wage: "${totalSalary[*]}
+
+n[$day]=${salary[*]}
+tn[$totalWorkingHour]=${totalSalary[*]}
 done
+
+echo "Daily Wage: ["${n[*]}"]"
+echo "Total Wage: ["${tn[*]}"]"
+
 echo "Employee has earned $totalSalary $ in a month (Total working Hour : $totalWorkingHour)";
