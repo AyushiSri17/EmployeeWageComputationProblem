@@ -22,11 +22,11 @@ day=1;
 
 declare -A day
 
-while [[ $day -le 20 && $totalWorkingHour -lt 100 ]]
+while [[ $day -le 20 && $totalWorkingHour -lt 40 ]]
 do
 	wHour=$(calculateWorkingHour $((RANDOM%3)));
 	totalWorkingHour=$(($totalWorkingHour + $wHour));
-	if [ $totalWorkingHour -gt 100 ]
+	if [ $totalWorkingHour -gt 40 ]
 	then
 		totalWorkingHour=$(($totalWorkingHour - $wHour));
 		break;
